@@ -54,7 +54,7 @@ jobs:
             LIB_PREFIX="lib"
             LIB_OUTPUT="target/${{ matrix.target }}/release/${LIB_PREFIX}${PROJECT_NAME}${{ matrix.lib-suffix }}"
         fi
-        LIB_RELEASE="${PROJECT_NAME}-${{ matrix.name }}${{ matrix.lib-suffix }}"
+        LIB_RELEASE="${PROJECT_NAME}"
         if [ ! -f "${LIB_OUTPUT}" ]; then
             echo "Library not found at ${LIB_OUTPUT}"
             exit 1
