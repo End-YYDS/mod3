@@ -1,0 +1,11 @@
+[dependencies.plugin_core]
+features = ["plugin_macro"]
+git = "https://github.com/End-YYDS/plugin_core"
+
+[lib]
+crate-type = ["dylib"]
+
+[package]
+edition = "2021"
+name = "mod3"
+version = "0.1.0"
