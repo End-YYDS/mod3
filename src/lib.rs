@@ -21,19 +21,24 @@ impl Plugin for Mod3 {
         PLUGIN_DESCRIPTION
     }
 
-    fn execute(&self, input: &str) -> PluginResult<()> {
-        let command: PluginCommand = serde_json::from_str(input).map_err(|e| {
-            PluginError::command_error(input, format!("Failed to parse command: {}", e).as_str())
-        })?;
-        match command.action.as_str() {
-            "hello" => {
-                println!("Hello, Mod3!");
-            }
-            _ => {
-                return Err(PluginError::command_error(
+    fn execute(&self, input: Option<&str>) -> PluginResult<()> {
+        if let Some(input) = input {
+            let command: PluginCommand = serde_json::from_str(input).map_err(|e| {
+                PluginError::command_error(
                     input,
-                    format!("Unknown command: {}", command.action).as_str(),
-                ));
+                    format!("Failed to parse command: {}", e).as_str(),
+                )
+            })?;
+            match command.action.as_str() {
+                "hello" => {
+                    println!("Hello, Mod3! {:#?}", command.parameters);
+                }
+                _ => {
+                    return Err(PluginError::command_error(
+                        input,
+                        format!("Unknown command: {}", command.action).as_str(),
+                    ));
+                }
             }
         }
         Ok(())

@@ -48,7 +48,7 @@ dependencies = [
 [[package]]
 name = "plugin_api"
 version = "0.1.0"
-source = "git+https://github.com/End-YYDS/plugin_core#f746ae55fd1ce5067aacb5117b81d82fd2effe72"
+source = "git+https://github.com/End-YYDS/plugin_core#dfdccbe426c8d7612613dedf1cf0cf42ee5d1d0f"
 dependencies = [
  "serde",
  "serde_json",
@@ -58,7 +58,7 @@ dependencies = [
 [[package]]
 name = "plugin_core"
 version = "0.1.0"
-source = "git+https://github.com/End-YYDS/plugin_core#f746ae55fd1ce5067aacb5117b81d82fd2effe72"
+source = "git+https://github.com/End-YYDS/plugin_core#dfdccbe426c8d7612613dedf1cf0cf42ee5d1d0f"
 dependencies = [
  "plugin_api",
  "plugin_macro",
@@ -67,7 +67,7 @@ dependencies = [
 [[package]]
 name = "plugin_macro"
 version = "0.1.0"
-source = "git+https://github.com/End-YYDS/plugin_core#f746ae55fd1ce5067aacb5117b81d82fd2effe72"
+source = "git+https://github.com/End-YYDS/plugin_core#dfdccbe426c8d7612613dedf1cf0cf42ee5d1d0f"
 dependencies = [
  "quote",
  "syn",
